@@ -1,0 +1,87 @@
+.hidden{
+    display: none;
+}
+img{
+ position:absolute;
+width:100%;
+height:100%;
+left: 0px;
+top: 0px;
+right:0px;
+bottom:0px;
+z-index: -1;
+opacity:80%;
+}
+
+#clock{
+   
+    text-align: center;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    cursor: default;
+    font-size: 1050%;
+    letter-spacing: -5px;
+    color: #FFFFFF;
+}
+#greeting{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-weight: 500;
+    
+    color: #fff;
+   
+}
+
+#clock, #greeting{
+    font-weight: 10000;
+}
+::placeholder{
+  
+  font-weight: bold;
+}
+#todo-form input {
+    width: 100%;
+    padding: var(--input-padding);
+    display: block;
+    background: 0;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+    font-size: 2.25em;
+    line-height: 1.2;
+    font-weight: 500;
+    outline: none;
+    text-align: center;
+    transition: border-color .2s ease;
+
+  }
+  #quote{
+    display: block;
+    font-size: 1.64em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin: 0;
+    overflow-wrap: break-word;
+    text-align: center;
+
+    box-sizing: border-box;
+  }
+  #todo-list{
+    font-size: 30px;
+    font-weight: bold;
+  }
+  #weather{
+     font-size: 30px;
+  }
+/* 
+  width:120px;
+  height:40px;
+  font-size:20px;
+  outline: none; */
