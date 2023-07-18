@@ -1,20 +1,20 @@
-function onGeoOk(position){
-    const lat = position.coords.latitude;
-    const lon = position.coords.longitude;
-    const API_KEY = "fc8c73b3ed52f647374f9a9a6071807a";
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
-    fetch(url)
-    .then((response)=>response.json())
+function onGeoOk(position) {
+  const lat = position.coords.latitude;
+  const lon = position.coords.longitude;
+  const API_KEY = 'fc8c73b3ed52f647374f9a9a6071807a';
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+  fetch(url)
+    .then((response) => response.json())
     .then((data) => {
-        const weather = document.querySelector("#weather span:first-child")
-        const city = document.querySelector("#weather span:last-child")
-        city.innerText = data.name;
-        weather.innerText= data.weather[0].main;
+      const weather = document.querySelector('#weather span:first-child');
+      const city = document.querySelector('#weather span:last-child');
+      city.innerText = data.name;
+      weather.innerText = data.weather[0].main;
     });
 }
 
 function onGeoError() {
-    alert("Can't find you. No weather for you.");
+  alert("Can't find you. No weather for you.");
 }
 //위치를 나타낼때는 getCurrentPosition함수 내에 위치 성공함수와 실패함수를 정의해서 넣어야 함
-navigator.geolocation.getCurrentPosition(onGeoOk,onGeoError);
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
