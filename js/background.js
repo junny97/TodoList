@@ -1,23 +1,28 @@
- const images = [
-     "back1.jpg",
-     "back2.jpg",
-     "back3.jpg",
-     "back4.jpg",
-     "back5.jpg",
-     "back6.jpg",
-     "back7.jpg",
-     "back8.jpg",
-     "back9.jpg",
-     "back10.jpg",
-     "back11.jpg",
+const images = [
+  'https://user-images.githubusercontent.com/59393359/74718667-0adb8a80-5276-11ea-8bc3-0e36c67cf28a.jpg',
+  'https://user-images.githubusercontent.com/59393359/74718765-30689400-5276-11ea-8a91-dd7ce797074b.jpg',
+  'https://user-images.githubusercontent.com/59393359/74718795-3f4f4680-5276-11ea-9f52-58bb99cb2db0.jpg',
+];
 
+const setRandomBackgroundImage = () => {
+  const chosenImageIndex = Math.floor(Math.random() * images.length);
+  const chosenImage = images[chosenImageIndex];
 
+  const bgImage = document.createElement('img');
+  bgImage.src = chosenImage;
+  bgImage.style.position = 'fixed';
+  bgImage.style.width = '100vw';
+  bgImage.style.height = '100vh';
+  bgImage.style.zIndex = '-1';
+  bgImage.style.objectFit = 'cover';
 
- ]
+  const existingBgImage = document.querySelector('#bgImage');
+  if (existingBgImage) {
+    document.body.removeChild(existingBgImage);
+  }
 
- const chosenImage = images[Math.floor(Math.random() * images.length)];
+  bgImage.id = 'bgImage';
+  document.body.appendChild(bgImage);
+};
 
-const bgImage = document.createElement("img"); //createElement를 이용하면 자바스크립트에서 html의 element 생성가능
-
-bgImage.src =`img/${chosenImage}`;
-document.body.appendChild(bgImage); // 엘리멘트를 body태그에 추가하게 해줌
+setRandomBackgroundImage();
