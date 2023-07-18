@@ -1,7 +1,9 @@
 const images = [
-  'https://user-images.githubusercontent.com/59393359/74718667-0adb8a80-5276-11ea-8bc3-0e36c67cf28a.jpg',
+  'https://github.com/junny97/TodoList/assets/72855681/4c4bccbd-7a1b-4a3c-b6cf-d401766cf790',
   'https://user-images.githubusercontent.com/59393359/74718765-30689400-5276-11ea-8a91-dd7ce797074b.jpg',
-  'https://user-images.githubusercontent.com/59393359/74718795-3f4f4680-5276-11ea-9f52-58bb99cb2db0.jpg',
+  'https://github.com/junny97/TodoList/assets/72855681/ef0960ab-36d9-4382-8354-fe7b9e9e42a0',
+  'https://github.com/junny97/TodoList/assets/72855681/747a846e-572b-46a6-8267-c82f3c041e2b',
+  'https://github.com/junny97/TodoList/assets/72855681/7697082a-97b0-4654-a174-dc231b123571',
 ];
 
 const setRandomBackgroundImage = () => {
