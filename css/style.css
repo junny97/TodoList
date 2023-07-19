@@ -80,6 +80,23 @@ img {
 #todo-form ::placeholder {
   color: #fff;
 }
+
+.todo-item {
+  color: white;
+  margin: 20px;
+}
+
+.todo-button {
+  font-size: 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
 #quote {
   display: block;
   font-size: 1.04em;
