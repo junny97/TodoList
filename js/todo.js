@@ -19,11 +19,10 @@ function deleteToDo(event) {
 function editToDo(event) {
   const li = event.target.parentElement;
   const todoText = li.querySelector('span').innerText;
-  const newText = prompt('Edit the to-do item:', todoText);
+  const newText = prompt('오늘의 할 일을 수정해 주세요:', todoText);
 
   if (newText !== null) {
     if (newText.trim() !== '') {
-      // Check if the newText is not empty or contains only spaces
       li.querySelector('span').innerText = newText;
       const todoId = parseInt(li.id);
       toDos = toDos.map((todo) => {
